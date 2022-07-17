@@ -1,11 +1,72 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" onclick="controleDaPersonagem()">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
   <title>Project 1</title>
+  <script>
+var dx;
+var dy;
+var px;
+var py;
+var velo;
+var obj;
+var interv;
+
+function inicia(){
+    dx=0;
+    dy=0;
+    px=0;
+    py=0;
+    velo=1;
+    obj=document.getElementById("persona1")
+    document.addEventListener("keydown",teclaDown);
+    document.addEventListener("keyup",teclaUp);
+    interv=setInterval(funcmov, 1); 
+}
+
+function teclaDown(event) {
+    let tecla = event.key;
+    if (tecla === "ArrowLeft") {
+        dx = -1;
+    } else if (tecla === "ArrowUp") {
+        dy = -1;
+    } else if (tecla === "ArrowRight") {
+        dx = 1;
+    } else if (tecla === "ArrowDown") {
+        dy = 1;
+    }
+}
+
+function teclaUp(event) {
+    let tecla = event.key;
+    if (tecla === "ArrowLeft") {
+        dx = 0;
+    } else if (tecla === "ArrowUp") {
+        dy = 0;
+    } else if (tecla === "ArrowRight") {
+        dx = 0;
+    } else if (tecla === "ArrowDown") {
+        dy = 0;
+    }
+}
+
+
+/*funçao que prepara as posicoes do nosso elemento*/
+
+function funcmov(){
+    px+=dx*velo;
+    py+=dy*velo;
+    obj.style.left=px+"px";
+    obj.style.top=py+"py";
+}
+
+
+
+window.addEventListener("load", inicia);
+  </script>
 </head>
 <body>
     <div id="game">

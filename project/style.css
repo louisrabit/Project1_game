@@ -7,7 +7,7 @@
 
 /* largura , altura e boder(quadro petro)*/
 #game{
-    width: 800px ;
+    width: 650px ;
     height: 500px;
     border: 10px solid black;
 }
@@ -23,6 +23,7 @@
     position: relative;
     top: -70px;
     left: 0px;
+    animation: argola1 4s infinite linear
     }
 
 #argola2{
@@ -32,6 +33,7 @@
     position: relative;
     top: -80px;
     left: 200px;
+    animation: argola2 7s infinite linear
     }    
 
 
@@ -42,6 +44,7 @@
     position: relative;
     top: -90px;
     left: 400px;
+    animation: argola4 5s infinite linear
    }
    
  
@@ -54,7 +57,7 @@
     position: relative;
     top: -100px;
     left: 600px;
-    animation: argola4 1s infinite linear;/*animacao , 1seg, constante */
+    animation: argola4 3s infinite linear;/*animacao , 1seg, constante */
    
 }
 
@@ -80,12 +83,41 @@ background-color: rgb(136, 41, 179);
 position: relative;
 top: 430px;
 left: 400px;
+/*animation: persona1 1s both linear;*/
+}
+
+
+
+
+
+
+/*Argolas animadas */
+
+@keyframes argola1{
+    0%{top: -70;}
+    100%{top: 417px;}
+}
+@keyframes argola2{
+    0%{top: -80px;}
+    100%{top: 410px;}
+}
+
+@keyframes argola3{
+    0%{top: -90px;}
+    100%{top: 410px;}
 }
 
 
 @keyframes argola4{
-   
+   0%{top: -100px;}
+   100%{top: 390px;}
 }
+
+
+
+
+
+ 
 
 
 
