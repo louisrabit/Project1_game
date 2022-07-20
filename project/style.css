@@ -1,0 +1,14 @@
+*{margin: 0;padding: 0;box-sizing: border-box;}
+body{
+   background-image: url("Rastafari.jpg");
+ 
+display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+canvas {
+    background-color: rgb(226, 228, 220);
+    
+}
